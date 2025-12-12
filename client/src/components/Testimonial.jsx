@@ -31,7 +31,7 @@ const Testimonial = () => {
       id: 3,
       name: "Ava Johnson",
       location: "Sydney, Australia",
-      image: assets.testimonial_image_1,
+      image: assets.testimonial_image_3,
       rating: 5,
       review:
         "Tôi thực sự khuyên dùng CarRental! Đội xe của họ tuyệt vời và tôi luôn cảm thấy mình nhận được ưu đãi tốt nhất với dịch vụ xuất sắc.",

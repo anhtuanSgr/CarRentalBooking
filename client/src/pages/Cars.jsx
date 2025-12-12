@@ -23,7 +23,8 @@ const Cars = () => {
       car.model.toLowerCase().includes(searchLower) ||
       car.category.toLowerCase().includes(searchLower) ||
       car.fuel_type.toLowerCase().includes(searchLower) ||
-      car.transmission.toLowerCase().includes(searchLower)
+      car.transmission.toLowerCase().includes(searchLower) ||
+      car.location.toLowerCase().includes(searchLower)
     );
   });
 
@@ -46,18 +47,14 @@ const Cars = () => {
           style={{ opacity: 1, transform: "none" }}
         >
           {/* Icon tìm kiếm */}
-          <img
-            src={assets.search_icon}
-            alt=""
-            className="w-4.5 h-4.5 mr-2"
-          />
+          <img src={assets.search_icon} alt="" className="w-4.5 h-4.5 mr-2" />
 
           {/* Input tìm kiếm */}
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Tìm theo hãng, mẫu xe hoặc tính năng"
+            placeholder="Tìm theo hãng, mẫu xe, địa điểm hoặc tính năng"
             className="w-full h-full outline-none text-gray-500"
           />
 

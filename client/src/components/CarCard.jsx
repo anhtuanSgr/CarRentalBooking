@@ -40,7 +40,7 @@ const CarCard = ({ car }) => {
         />
 
         {/* Badge trạng thái xe - chỉ hiển thị khi xe có sẵn */}
-        {car.isAvaliable && (
+        {car.isAvailable && (
           <p className="absolute top-4 left-4 rounded-full bg-primary/90 px-2.5 py-1 text-xs text-white">
             Có sẵn ngay
           </p>

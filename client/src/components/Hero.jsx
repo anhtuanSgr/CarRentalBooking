@@ -12,6 +12,34 @@ const Hero = () => {
   // State quản lý địa điểm nhận xe được chọn
   const [pickupLocation, setPickupLocation] = useState("");
 
+  // State quản lý ngày nhận xe và ngày trả xe
+  const [pickupDate, setPickupDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+
+  // Handler cho form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate ngày trả xe phải sau ngày nhận xe
+    if (
+      pickupDate &&
+      returnDate &&
+      new Date(returnDate) <= new Date(pickupDate)
+    ) {
+      alert("Ngày trả xe phải sau ngày nhận xe");
+      return;
+    }
+
+    // Log dữ liệu form để debug
+    console.log({
+      pickupLocation,
+      pickupDate,
+      returnDate,
+    });
+
+    // TODO: Xử lý tìm kiếm xe
+  };
+
   return (
     // Container chính với chiều cao full screen, layout dọc, căn giữa
     <div className="h-screen flex flex-col items-center justify-center gap-14 bg-light text-center">
@@ -19,7 +47,10 @@ const Hero = () => {
       <h1 className="text-4xl md:text-5xl font-semibold">Xe sang cho thuê</h1>
 
       {/* Form tìm kiếm xe - layout dọc trên mobile, ngang trên desktop */}
-      <form className="flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-[800px] bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-[800px] bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]"
+      >
         {/* Container cho các input - responsive layout */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:ml-8">
           {/* Select địa điểm nhận xe */}
@@ -28,6 +59,7 @@ const Hero = () => {
               required
               value={pickupLocation}
               onChange={(e) => setPickupLocation(e.target.value)}
+              className="text-sm"
             >
               {/* Option mặc định */}
               <option value="">Địa điểm nhận xe</option>
@@ -52,6 +84,8 @@ const Hero = () => {
             <input
               id="pickup-date"
               type="date"
+              value={pickupDate}
+              onChange={(e) => setPickupDate(e.target.value)}
               min={today} // Không cho chọn ngày trong quá khứ
               className="text-sm text-gray-500"
               required
@@ -64,7 +98,9 @@ const Hero = () => {
             <input
               id="return-date"
               type="date"
-              min={today} // Không cho chọn ngày trong quá khứ
+              value={returnDate}
+              onChange={(e) => setReturnDate(e.target.value)}
+              min={pickupDate || today} // Không cho chọn ngày trước ngày nhận xe
               className="text-sm text-gray-500"
               required
             />
@@ -74,7 +110,7 @@ const Hero = () => {
         {/* Nút tìm kiếm với icon và text */}
         <button
           type="submit"
-          className="flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer"
+          className="flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer transition-colors"
         >
           {/* Icon tìm kiếm */}
           <img

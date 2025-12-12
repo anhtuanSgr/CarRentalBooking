@@ -40,7 +40,7 @@ const Newsletter = () => {
       {/* Form đăng ký với input email và nút submit */}
       <form
         onSubmit={handleSubmit}
-        className="flex items-center justify-between max-w-2xl w-full md:h-13 h-12"
+        className="flex items-center justify-between max-w-2xl w-full md:h-14 h-12"
       >
         {/* Input email - chiếm toàn bộ chiều rộng, bo góc trái */}
         <input

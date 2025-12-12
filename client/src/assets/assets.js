@@ -152,7 +152,7 @@ export const dummyCarData = [
     location: "Hà Nội", // Vị trí: Hà Nội
     description:
       "BMW X5 là mẫu SUV hạng trung cao cấp được sản xuất bởi BMW. X5 ra mắt năm 1999 như mẫu SUV đầu tiên của BMW.", // Mô tả xe
-    isAvaliable: true, // Có sẵn để thuê
+    isAvailable: true, // Có sẵn để thuê
     createdAt: "2025-04-16T07:26:56.215Z", // Thời gian tạo
   },
   {
@@ -170,7 +170,7 @@ export const dummyCarData = [
     location: "TP. Hồ Chí Minh",
     description:
       "Toyota Corolla là mẫu sedan hạng trung cao cấp được sản xuất bởi Toyota. Corolla ra mắt năm 2008 như mẫu sedan đầu tiên của Toyota.",
-    isAvaliable: true,
+    isAvailable: true,
     createdAt: "2025-04-16T08:33:57.993Z",
   },
   {
@@ -188,7 +188,7 @@ export const dummyCarData = [
     location: "Đà Nẵng",
     description:
       "Jeep Wrangler là mẫu SUV hạng trung cao cấp được sản xuất bởi Jeep. Wrangler ra mắt năm 2003 như mẫu SUV đầu tiên của Jeep.",
-    isAvaliable: true,
+    isAvailable: true,
     createdAt: "2025-04-16T08:34:39.592Z",
   },
   {
@@ -206,7 +206,7 @@ export const dummyCarData = [
     location: "Hải Phòng",
     description:
       "Đây là mẫu sedan hạng trung cao cấp được sản xuất bởi Toyota. Corolla ra mắt năm 2008 như mẫu sedan đầu tiên của Toyota.",
-    isAvaliable: true,
+    isAvailable: true,
     createdAt: "2025-04-17T06:15:47.318Z",
   },
 ];

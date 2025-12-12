@@ -57,7 +57,7 @@ const CarDetails = () => {
     }
 
     // Kiểm tra ngày trả phải sau ngày nhận
-    if (new Date(returnDate) < new Date(pickupDate)) {
+    if (new Date(returnDate) <= new Date(pickupDate)) {
       alert("Ngày trả xe phải sau ngày nhận xe");
       return;
     }
@@ -225,7 +225,7 @@ const CarDetails = () => {
         {/* Cột phải - Form đặt xe */}
         <form
           onSubmit={handleBooking}
-          className="sticky top-18 h-max space-y-6 rounded-xl p-6 text-gray-500 shadow-lg"
+          className="sticky top-20 h-max space-y-6 rounded-xl bg-white p-6 text-gray-500 shadow-lg"
         >
           {/* Giá thuê */}
           <p className="flex items-center justify-between text-2xl font-semibold text-gray-800">

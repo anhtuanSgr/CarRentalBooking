@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 /**
  * Component Footer - Hiển thị footer của website
@@ -25,7 +26,7 @@ const Footer = () => {
           {/* Các icon mạng xã hội */}
           <div className="flex items-center gap-3 mt-6">
             {/* Link Facebook */}
-            <a href="#">
+            <a href="#" onClick={(e) => e.preventDefault()}>
               <img
                 src={assets.facebook_logo}
                 alt="Facebook"
@@ -34,7 +35,7 @@ const Footer = () => {
             </a>
 
             {/* Link Instagram */}
-            <a href="#">
+            <a href="#" onClick={(e) => e.preventDefault()}>
               <img
                 src={assets.instagram_logo}
                 alt="Instagram"
@@ -43,7 +44,7 @@ const Footer = () => {
             </a>
 
             {/* Link Twitter */}
-            <a href="#">
+            <a href="#" onClick={(e) => e.preventDefault()}>
               <img
                 src={assets.twitter_logo}
                 alt="Twitter"
@@ -52,7 +53,7 @@ const Footer = () => {
             </a>
 
             {/* Link Email */}
-            <a href="#">
+            <a href="#" onClick={(e) => e.preventDefault()}>
               <img src={assets.gmail_logo} alt="Email" className="w-5 h-5" />
             </a>
           </div>
@@ -67,16 +68,18 @@ const Footer = () => {
             </h2>
             <ul className="flex flex-col gap-1.5 mt-3">
               <li>
-                <a href="/">Trang chủ</a>
+                <Link to="/">Trang chủ</Link>
               </li>
               <li>
-                <a href="/cars">Xe có sẵn</a>
+                <Link to="/cars">Xe có sẵn</Link>
               </li>
               <li>
-                <a href="/my-bookings">Đặt xe của tôi</a>
+                <Link to="/my-bookings">Đặt xe của tôi</Link>
               </li>
               <li>
-                <a href="#">Về chúng tôi</a>
+                <a href="#" onClick={(e) => e.preventDefault()}>
+                  Về chúng tôi
+                </a>
               </li>
             </ul>
           </div>
@@ -88,16 +91,24 @@ const Footer = () => {
             </h2>
             <ul className="flex flex-col gap-1.5 mt-3">
               <li>
-                <a href="#">Trung tâm trợ giúp</a>
+                <a href="#" onClick={(e) => e.preventDefault()}>
+                  Trung tâm trợ giúp
+                </a>
               </li>
               <li>
-                <a href="#">Điều khoản dịch vụ</a>
+                <a href="#" onClick={(e) => e.preventDefault()}>
+                  Điều khoản dịch vụ
+                </a>
               </li>
               <li>
-                <a href="#">Chính sách bảo mật</a>
+                <a href="#" onClick={(e) => e.preventDefault()}>
+                  Chính sách bảo mật
+                </a>
               </li>
               <li>
-                <a href="#">Bảo hiểm</a>
+                <a href="#" onClick={(e) => e.preventDefault()}>
+                  Bảo hiểm
+                </a>
               </li>
             </ul>
           </div>
@@ -130,15 +141,21 @@ const Footer = () => {
         {/* Các liên kết phụ */}
         <ul className="flex items-center gap-4">
           <li>
-            <a href="#">Bảo mật</a>
+            <a href="#" onClick={(e) => e.preventDefault()}>
+              Bảo mật
+            </a>
           </li>
           <li>|</li>
           <li>
-            <a href="#">Điều khoản</a>
+            <a href="#" onClick={(e) => e.preventDefault()}>
+              Điều khoản
+            </a>
           </li>
           <li>|</li>
           <li>
-            <a href="#">Cookies</a>
+            <a href="#" onClick={(e) => e.preventDefault()}>
+              Cookies
+            </a>
           </li>
         </ul>
       </div>
