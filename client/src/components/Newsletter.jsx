@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * Component Newsletter - Hiển thị form đăng ký nhận tin tức và ưu đãi
  * @returns {JSX.Element} Form đăng ký newsletter với input email và nút submit
@@ -44,11 +42,11 @@ const Newsletter = () => {
       >
         {/* Input email - chiếm toàn bộ chiều rộng, bo góc trái */}
         <input
-          type="email"
           name="email"
+          type="email"
           placeholder="Nhập địa chỉ email của bạn"
-          required
           className="w-full h-full px-3 border border-gray-300 border-r-0 rounded-md rounded-r-none text-gray-500 outline-none"
+          required
         />
 
         {/* Nút submit - bo góc phải, hover effect */}

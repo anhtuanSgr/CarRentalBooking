@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { assets, cityList } from "../assets/assets.js";
 
 /**
@@ -32,8 +32,8 @@ const Hero = () => {
 
     // Log dữ liệu form để debug
     console.log({
-      pickupLocation,
       pickupDate,
+      pickupLocation,
       returnDate,
     });
 
@@ -55,12 +55,12 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-start md:items-center gap-10 md:ml-8">
           {/* Select địa điểm nhận xe */}
           <div className="flex flex-col items-start gap-2">
-            <select
-              required
-              value={pickupLocation}
-              onChange={(e) => setPickupLocation(e.target.value)}
-              className="text-sm"
-            >
+          <select
+            value={pickupLocation}
+            onChange={(e) => setPickupLocation(e.target.value)}
+            className="text-sm"
+            required
+          >
               {/* Option mặc định */}
               <option value="">Địa điểm nhận xe</option>
 
@@ -81,29 +81,29 @@ const Hero = () => {
           {/* Input ngày nhận xe */}
           <div className="flex flex-col items-start gap-2">
             <label htmlFor="pickup-date">Ngày nhận xe</label>
-            <input
-              id="pickup-date"
-              type="date"
-              value={pickupDate}
-              onChange={(e) => setPickupDate(e.target.value)}
-              min={today} // Không cho chọn ngày trong quá khứ
-              className="text-sm text-gray-500"
-              required
-            />
+          <input
+            id="pickup-date"
+            type="date"
+            value={pickupDate}
+            onChange={(e) => setPickupDate(e.target.value)}
+            className="text-sm text-gray-500"
+            min={today} // Không cho chọn ngày trong quá khứ
+            required
+          />
           </div>
 
           {/* Input ngày trả xe */}
           <div className="flex flex-col items-start gap-2">
             <label htmlFor="return-date">Ngày trả xe</label>
-            <input
-              id="return-date"
-              type="date"
-              value={returnDate}
-              onChange={(e) => setReturnDate(e.target.value)}
-              min={pickupDate || today} // Không cho chọn ngày trước ngày nhận xe
-              className="text-sm text-gray-500"
-              required
-            />
+          <input
+            id="return-date"
+            type="date"
+            value={returnDate}
+            onChange={(e) => setReturnDate(e.target.value)}
+            className="text-sm text-gray-500"
+            min={pickupDate || today} // Không cho chọn ngày trước ngày nhận xe
+            required
+          />
           </div>
         </div>
 
@@ -114,18 +114,18 @@ const Hero = () => {
         >
           {/* Icon tìm kiếm */}
           <img
-            alt="tìm kiếm"
             src={assets.search_icon}
-            className="brightness-300"
+            alt="tìm kiếm"
             width="16"
             height="16"
+            className="brightness-300"
           />
           Tìm kiếm
         </button>
       </form>
 
       {/* Hình ảnh xe chính - hiển thị ở cuối hero section */}
-      <img alt="xe" src={assets.main_car} className="max-h-74" />
+      <img src={assets.main_car} alt="xe" className="max-h-74" />
     </div>
   );
 };

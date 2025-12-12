@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { assets, menuLinks } from "../assets/assets";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { assets, menuLinks } from "../assets/assets";
 
 /**
  * Component Navbar - Thanh điều hướng chính của ứng dụng
@@ -76,9 +76,9 @@ const Navbar = ({ onShowLogin }) => {
       {/* Nút menu hamburger, chỉ hiển thị trên mobile (sm trở xuống) */}
       {/* Khi click sẽ toggle trạng thái mở/đóng menu */}
       <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="sm:hidden cursor-pointer"
         aria-label="menu"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {/* Hiển thị icon đóng nếu menu đang mở, icon menu nếu đang đóng */}
         <img

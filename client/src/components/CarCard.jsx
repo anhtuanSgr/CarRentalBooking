@@ -1,6 +1,5 @@
-import React from "react";
-import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { assets } from "../assets/assets";
 
 /**
  * Component CarCard - Hiển thị thẻ thông tin xe
@@ -8,6 +7,9 @@ import { useNavigate } from "react-router-dom";
  * @returns {JSX.Element} Thẻ xe với hình ảnh và thông tin chi tiết
  */
 const CarCard = ({ car }) => {
+  // Hook điều hướng trang
+  const navigate = useNavigate();
+
   /**
    * Format giá tiền theo định dạng VNĐ
    * @param {number} price - Giá tiền cần format
@@ -16,9 +18,6 @@ const CarCard = ({ car }) => {
   const formatPrice = (price) => {
     return new Intl.NumberFormat("vi-VN").format(price);
   };
-
-  // Hook điều hướng trang
-  const navigate = useNavigate();
 
   return (
     <div

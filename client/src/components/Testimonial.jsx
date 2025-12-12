@@ -1,6 +1,5 @@
-import React from "react";
-import Title from "./Title";
 import { assets } from "../assets/assets";
+import Title from "./Title";
 
 /**
  * Component Testimonial - Hiển thị các đánh giá từ khách hàng
@@ -11,27 +10,27 @@ const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Emma Rodriguez",
-      location: "Barcelona, Spain",
       image: assets.testimonial_image_1,
+      location: "Barcelona, Spain",
+      name: "Emma Rodriguez",
       rating: 5,
       review:
         "Tôi đã thuê xe từ nhiều công ty khác nhau, nhưng trải nghiệm với CarRental thật đặc biệt.",
     },
     {
       id: 2,
-      name: "John Smith",
-      location: "New York, USA",
       image: assets.testimonial_image_2,
+      location: "New York, USA",
+      name: "John Smith",
       rating: 5,
       review:
         "CarRental đã làm cho chuyến đi của tôi dễ dàng hơn rất nhiều. Xe được giao tận nơi và dịch vụ khách hàng tuyệt vời!",
     },
     {
       id: 3,
-      name: "Ava Johnson",
-      location: "Sydney, Australia",
       image: assets.testimonial_image_3,
+      location: "Sydney, Australia",
+      name: "Ava Johnson",
       rating: 5,
       review:
         "Tôi thực sự khuyên dùng CarRental! Đội xe của họ tuyệt vời và tôi luôn cảm thấy mình nhận được ưu đãi tốt nhất với dịch vụ xuất sắc.",

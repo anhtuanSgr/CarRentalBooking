@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { assets, dummyCarData } from "../assets/assets";
 import Loader from "../components/Loader";
@@ -239,13 +239,13 @@ const CarDetails = () => {
           <div className="flex flex-col gap-2">
             <label htmlFor="pickup-date">Ngày nhận xe</label>
             <input
-              type="date"
               id="pickup-date"
               value={pickupDate}
               onChange={(e) => setPickupDate(e.target.value)}
+              type="date"
+              className="rounded-lg border border-borderColor px-3 py-2"
               min={getTodayDate()}
               required
-              className="rounded-lg border border-borderColor px-3 py-2"
             />
           </div>
 
@@ -253,13 +253,13 @@ const CarDetails = () => {
           <div className="flex flex-col gap-2">
             <label htmlFor="return-date">Ngày trả xe</label>
             <input
-              type="date"
               id="return-date"
               value={returnDate}
               onChange={(e) => setReturnDate(e.target.value)}
+              type="date"
+              className="rounded-lg border border-borderColor px-3 py-2"
               min={pickupDate || getTodayDate()}
               required
-              className="rounded-lg border border-borderColor px-3 py-2"
             />
           </div>
 

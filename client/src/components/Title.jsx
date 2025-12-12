@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * Component Title - Hiển thị tiêu đề và mô tả cho các section
  * @param {Object} props - Props của component

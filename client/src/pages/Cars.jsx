@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { assets, dummyCarData } from "../assets/assets";
-import Title from "../components/Title";
 import CarCard from "../components/CarCard";
+import Title from "../components/Title";
 
 /**
  * Component Cars - Trang hiển thị danh sách xe có sẵn
@@ -51,9 +51,9 @@ const Cars = () => {
 
           {/* Input tìm kiếm */}
           <input
-            type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            type="text"
             placeholder="Tìm theo hãng, mẫu xe, địa điểm hoặc tính năng"
             className="w-full h-full outline-none text-gray-500"
           />

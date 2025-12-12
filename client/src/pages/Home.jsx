@@ -1,9 +1,8 @@
-import React from "react";
-import Hero from "../components/Hero";
-import FeaturedSection from "../components/FeaturedSection";
 import Banner from "../components/Banner";
-import Testimonial from "../components/Testimonial";
+import FeaturedSection from "../components/FeaturedSection";
+import Hero from "../components/Hero";
 import Newsletter from "../components/Newsletter";
+import Testimonial from "../components/Testimonial";
 
 /**
  * Component Home - Trang chủ của ứng dụng thuê xe

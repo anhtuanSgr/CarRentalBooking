@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../assets/assets";
 
 /**
@@ -28,8 +27,8 @@ const Banner = () => {
 
         {/* Nút call-to-action để đăng ký xe */}
         <button
-          className="px-6 py-2 bg-white hover:bg-slate-100 transition-all text-primary rounded-lg text-sm mt-4 mb-10 md:mb-0 cursor-pointer"
           tabIndex="0"
+          className="px-6 py-2 bg-white hover:bg-slate-100 transition-all text-primary rounded-lg text-sm mt-4 mb-10 md:mb-0 cursor-pointer"
         >
           Đăng ký xe của bạn
         </button>

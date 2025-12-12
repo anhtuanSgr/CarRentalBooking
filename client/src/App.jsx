@@ -1,11 +1,11 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
 import CarDetails from "./pages/CarDetails";
 import Cars from "./pages/Cars";
+import Home from "./pages/Home";
 import MyBookings from "./pages/MyBookings";
-import { useState } from "react";
-import Footer from "./components/Footer";
 
 /**
  * Component App - Component gốc của ứng dụng

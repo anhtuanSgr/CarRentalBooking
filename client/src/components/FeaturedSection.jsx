@@ -1,8 +1,7 @@
-import React from "react";
-import Title from "./Title";
-import CarCard from "./CarCard";
-import { dummyCarData, assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { assets, dummyCarData } from "../assets/assets";
+import CarCard from "./CarCard";
+import Title from "./Title";
 
 /**
  * Component FeaturedSection - Hiển thị phần xe nổi bật trên trang chủ

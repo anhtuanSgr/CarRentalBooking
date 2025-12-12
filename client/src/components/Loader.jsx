@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * Component Loader - Hiển thị loading spinner khi đang tải dữ liệu
  * @returns {JSX.Element} Loading spinner với animation xoay
