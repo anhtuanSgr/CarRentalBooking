@@ -13,33 +13,33 @@ import MyBookings from "./pages/MyBookings";
  * @returns {JSX.Element} Layout chính với Navbar, Routes và Footer
  */
 function App() {
-  // State quản lý hiển thị modal đăng nhập
-  const [showLogin, setShowLogin] = useState(false);
+	// State quản lý hiển thị modal đăng nhập
+	const [_showLogin, setShowLogin] = useState(false);
 
-  // Kiểm tra xem đường dẫn hiện tại có phải là trang owner không
-  const isOwnerPath = useLocation().pathname.startsWith("/owner");
+	// Kiểm tra xem đường dẫn hiện tại có phải là trang owner không
+	const isOwnerPath = useLocation().pathname.startsWith("/owner");
 
-  return (
-    <div>
-      {/* Hiển thị Navbar nếu không phải trang owner */}
-      {!isOwnerPath && <Navbar onShowLogin={setShowLogin} />}
+	return (
+		<div>
+			{/* Hiển thị Navbar nếu không phải trang owner */}
+			{!isOwnerPath && <Navbar onShowLogin={setShowLogin} />}
 
-      {/* Định nghĩa các routes của ứng dụng */}
-      <Routes>
-        {/* Trang chủ */}
-        <Route path="/" element={<Home />} />
-        {/* Trang chi tiết xe với tham số id */}
-        <Route path="/car-details/:id" element={<CarDetails />} />
-        {/* Trang danh sách xe */}
-        <Route path="/cars" element={<Cars />} />
-        {/* Trang đặt chỗ của tôi */}
-        <Route path="/my-bookings" element={<MyBookings />} />
-      </Routes>
+			{/* Định nghĩa các routes của ứng dụng */}
+			<Routes>
+				{/* Trang chủ */}
+				<Route element={<Home />} path="/" />
+				{/* Trang chi tiết xe với tham số id */}
+				<Route element={<CarDetails />} path="/car-details/:id" />
+				{/* Trang danh sách xe */}
+				<Route element={<Cars />} path="/cars" />
+				{/* Trang đặt chỗ của tôi */}
+				<Route element={<MyBookings />} path="/my-bookings" />
+			</Routes>
 
-      {/* Hiển thị Footer nếu không phải trang owner */}
-      {!isOwnerPath && <Footer />}
-    </div>
-  );
+			{/* Hiển thị Footer nếu không phải trang owner */}
+			{!isOwnerPath && <Footer />}
+		</div>
+	);
 }
 
 export default App;
